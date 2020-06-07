@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Flames</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+  <style>
+  /* Set black background color, white text and some padding */
+    .row.content {height: 375px}
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+      
+    }
+    header {
+      background-color: #FFB6C1;
+      color: black;
+      padding: 15px;
+    }
+    .titlebar {
+        font-family: "Sofia";
+        font-size: 50px;
+        font-variant-caps: petite-caps;
+        font-weight: lighter;
+        text-decoration: underline overline;
+    }
+    :not(.titlebar)
+    {
+        
+        font-variant-caps: petite-caps;
+        font-weight: lighter;
+    }
+    footer{
+        background-color: #FFB6C1;
+        color: black;
+        padding: 15px;
+    }
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+    .form1{
+        padding: 55px;
+    }
+    .result{
+      
+        font-family: "Sofia";
+        font-size: 25px;
+        font-variant-caps: petite-caps;
+        font-weight: lighter;    
+    }
+    
+</style>
+</head>
+<body>
+    <header>
+        
+        <h1 class="titlebar"><strong>Flames</strong></h1>
+        <h5><span class="glyphicon glyphicon-time"></span>An 90's kids Vintage game</h5>
+        
+    </header>
+    <div class="container-fluid">
+      <div class="row content">
+        <div class="col-sm-6 sidenav">
+            <h4>This game does not accurately predict whether or not an individual is right for you, but it can be fun to play this with your friends.</h4>
+            <form id="form1" class="form1">
+                <div class="form-group">
+                  <label for="name">Your Name:</label>
+                  <input type="name" class="form-control" placeholder="Enter name" id="name" required>
+                </div>
+                <div class="form-group">
+                  <label for="pname">Partner Name:</label>
+                  <input type="pname" class="form-control" placeholder="Enter partner name" id="pname" required>
+                </div>
+                <button type="button" onclick="myFunction()" class="btnsubmit">Check</button>
+                <button type="button" onclick="resetFun()" class="btnreset">Reset</button>
+                <p id="alert" style="color:red"></p>
+                
+              </form>
+        </div>
+        <div class="col-sm-6 sidenav center-block" style="text-align:center">
+            <p id="result" class="result"></p>
+           
+            </div>
+        </div>
+        
+        
+      </div>
+        
+    </div>
+    <footer>
+        <p><span class="glyphicon glyphicon-copyright-mark"></span>Team7</p>
+    </footer>
+    <script src="calc.js"></script>
+</body>
+</html>
