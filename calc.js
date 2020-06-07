@@ -1,7 +1,7 @@
 function myFunction() {
 
-    var name=document.getElementById("name").value;
-    var pname=document.getElementById("pname").value;
+    var name=(document.getElementById("name").value).toLowerCase();
+    var pname=(document.getElementById("pname").value).toLowerCase();
     
 
     if ((name.trim().length==0) || (pname.trim().length==""))
